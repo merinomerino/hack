@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-4" *ngFor="let hack of hacks ; let i = index">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top imagenURL" [src]="hack.Imagen" alt="Card image cap">
+          <div class="card-body" >
+            <h5 class="card-title">{{hack.nombre}}</h5>
+            <p class="card-text">{{hack.base}}</p>
+            <p class="card-text">{{hack.descripcion}}</p>
+
+            <button class="btn btn-danger"
+            (click)="borrarHeroe( hack, i ) ">
+      <i class="fa fa-trash">Borar</i>
+    </button>
+
+    <button class="btn btn-info mr-1"
+    [routerLink]="['/Hack', hack.id ]">
+<i class="fa fa-pen"> editar</i>
+</button>
+            
+            <a href="#" class="btn btn-primary">VER HACK!</a>
+          </div>
+        </div>
+      </div>

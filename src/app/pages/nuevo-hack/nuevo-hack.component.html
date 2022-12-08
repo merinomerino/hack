@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+      <form (ngSubmit)="agregar( f )"
+      #f="ngForm">
+
+        <div class="form-group">
+            <label>Firebase ID</label>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Firebase ID"
+                   [(ngModel)]="nuevoHack.id"
+                   name="id"
+                   disabled="disabled">
+            <small class="form-text text-muted">Este campo es autogenerado</small>
+          </div>
+   
+          <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre del Hack:</label>
+              <input 
+          class="input form-control"
+          type="text"
+           placeholder="Nombre" 
+           name="nombre" 
+           [(ngModel)]="nuevoHack.nombre">
+          <!-- [value]="nuevo.nombre"
+          (input)="cambiarNombre( $event )" -->
+            </div>
+   
+            <div class="mb-3">
+              <label for="base" class="form-label">Base:</label>
+              <input 
+              class="input form-control"
+              type="text"
+              placeholder="Base" 
+              name="base" 
+              [(ngModel)]="nuevoHack.base">
+          
+            </div>
+          
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">descripcion:</label>
+              <input 
+              class="input form-control"
+              type="text"
+              placeholder="Descripcion" 
+              name="descripcion" 
+              [(ngModel)]="nuevoHack.descripcion">
+          
+            </div>
+
+            <div class="mb-3">
+              <label for="Imagen" class="form-label">URL imagen:</label>
+              <input 
+              class="input form-control"
+              type="text"
+              placeholder="Imagen" 
+              name="Imagen" 
+              [(ngModel)]="nuevoHack.Imagen">
+          
+            </div>
+   
+          <button class="btn btn-primary" type="submit">Agregar</button>
+      
+      </form>
+  </div>
+  </div>
