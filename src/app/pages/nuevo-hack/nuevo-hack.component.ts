@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { HackModel } from 'src/app/models/heroe.model';
@@ -16,7 +16,9 @@ export class NuevoHackComponent implements OnInit {
   nuevoHack:HackModel = new HackModel();
 
   constructor(private hackServices: FirebaseService,
-              private route: ActivatedRoute ) { }
+              private path: Router,
+              private route: ActivatedRoute, 
+              ) { }
 
   ngOnInit() {
 
@@ -69,6 +71,8 @@ export class NuevoHackComponent implements OnInit {
         text: 'Se actualizó correctamente',
         icon: 'success'
       });
+      this.path.navigateByUrl('/misHacks')
+     
 
     });
 

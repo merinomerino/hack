@@ -1,7 +1,7 @@
 <nav class="navbar  navbar-dark bg-dark justify-content-between">
         
         <a class="navbar-brand">Monster Hacking</a>
-        <button routerLink="/Hack"
+        <button routerLink="/Hack/nuevo"
         type="button" class="btn btn-light "
         >Subir hack</button>
         <form class="form-inline">
@@ -15,5 +15,6 @@
         </div>
         </form>
         
-        <button type="button" class="btn btn-outline-danger">Cerrar sesión</button>
+        <button (click)="salir()"
+        type="button" class="btn btn-outline-danger">Cerrar sesión</button>
     </nav>

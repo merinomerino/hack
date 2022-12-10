@@ -1,5 +1,5 @@
 export interface Hack_Interface{
-    id:string;
+    id?:string;
     nombre: string;
     base: string;
     descripcion: string;
